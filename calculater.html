@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+</head>
+<body>
+    <input type="number" id="first_n">
+    <input type="number" id="second_n">
+
+    <div>
+        <input type="radio" value="+" name="calculate">+
+        <input type="radio" value="-" name="calculate">-
+        <input type="radio" value="*" name="calculate">*
+        <input type="radio" value="/" name="calculate">/
+    </div>
+    <input type="submit" id="submit" value="계산">
+    <script>
+        document.getElementById('submit').addEventListener('click', function(){
+            let n1 = parseFloat(document.getElementById('first_n').value);
+            let n2 = parseFloat(document.getElementById('second_n').value);
+            let calculate = document.querySelector('input[name="calculate"]:checked').value;
+            if(calculate){
+                calculate = calculate;
+            }else{
+                calculate = null;
+            }
+            if(calculate == '+'){
+            document.write(n1 + n2);
+            }else if(calculate == '-'){
+                document.write(n1 - n2);
+            }else if(calculate == '*'){
+                document.write(n1 * n2);
+            }else if(calculate == '/'){
+                document.write(n1 / n2);
+            }
+        })
+        
+    </script>
+</body>
+</html>

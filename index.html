@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guessing number</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="숫자를 맞춰보세요">
+    <script>
+        function clearText() {
+            let input = document.getElementById("number");
+            input.removeAttribute("readonly");
+            input.value = ""; 
+        }
+    </script>
+    <br>
+    <input type="submit" id="제출하기" value="submit">
+    <input type="submit" id="다시시작" value="restart"> 
+    <script>
+        let random = Math.floor(Math.random());
+        let number = document.getElementById('number').value;
+        document.getElementById('number').addEventListener('click', function(){
+            if()
+        });
+
+    </script>
+</body>
+</html>

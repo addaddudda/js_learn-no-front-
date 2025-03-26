@@ -15,16 +15,27 @@
         }
     </script>
     <br>
-    <input type="submit" id="submit" value="제출하기">
-    <input type="submit" id="restart" value="다시시작"> 
+    <input type="submit" id="submit" value="제출하기" onclick="check()">
+    <input type="submit" id="restart" value="다시시작" onclick="restart()"> 
+    <p id="message"></p>
     <script>
         let random = Math.floor(Math.random());
-        let number = document.getElementById('number').value;
-        document.getElementById('number').addEventListener('click', function(){
+        function check(){
+            let number = document.getElementById('number').value;
+            let message = document.getElementById('message');
             if(random == number){
-                
-            }
-        });
+                message.textContent('ㅊㅊ맞췄음');
+            }else if(random > number){
+                message.textContent('너무 높음 낮춰');
+            }else{
+                message.textContent('너무 낮음 높여');
+            } 
+        }
+        function restart(){
+            let number = document.getElementById('number').value;
+            document.getElementById('message').textContent = "";
+            document.getElementById('number').value = "";
+        }
 
     </script>
 </body>
